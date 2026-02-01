@@ -75,37 +75,37 @@ export default function App() {
             <div className="badge">B2C · Instalación + averías</div>
 
             <h1>
-              Estás perdiendo trabajos
-              <span className="grad"> por contestar tarde.</span>
+              Sistema comercial para instaladores de A/A
+              <span className="grad"> en Valencia.</span>
             </h1>
 
             <p className="lead">
-              Te entran consultas mientras estás en obra. Si no respondes rápido (y no haces seguimiento), el cliente se va con otro.
-              ClimaOps pone orden para que cierres más sin contratar a nadie.
+              Respuesta rápida + presupuesto + seguimiento.
+              <span className="muted"> Para cerrar más sin contratar a nadie.</span>
             </p>
 
             <div className="heroCtas">
               <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
-                Quiero cerrar más
+                Hablar por WhatsApp
               </a>
-              <div className="fine">Respuesta en 2–3 min. Sin precios en web.</div>
+              <div className="fine">Te digo si encaja en 2–3 min. Sin precios en web.</div>
             </div>
 
             <div className="metrics">
               <Metric value="< 15 min" label="respuesta (objetivo)" />
-              <Metric value="+ seguimiento" label="por estado" />
-              <Metric value="0 caos" label="agenda protegida" />
+              <Metric value="por estado" label="seguimiento" />
+              <Metric value="menos visitas" label="filtro + confirmación" />
             </div>
 
             <div className="bullets3">
               <Bullet>
-                <b>Respuesta en minutos</b> para que el lead no se enfríe.
+                <b>Más cierres</b> porque el lead no se enfría.
               </Bullet>
               <Bullet>
-                <b>Presupuesto + seguimiento</b> hasta cierre (sin perseguir a nadie).
+                <b>Más orden</b> (y menos estrés) en el día a día.
               </Bullet>
               <Bullet>
-                <b>Filtro y confirmación</b> para reducir visitas que no valen la pena.
+                <b>Más control</b>: reglas, horarios y qué se envía.
               </Bullet>
             </div>
 
@@ -116,10 +116,10 @@ export default function App() {
                 <span className="grad"> Es la fuga.</span>
               </div>
               <div className="painList">
-                <Pain>Respondes tarde porque estás en obra.</Pain>
-                <Pain>Envías presupuesto y nadie vuelve a escribir.</Pain>
-                <Pain>Te llenas de “curiosos” que solo comparan precio.</Pain>
-                <Pain>Se te acumulan chats y se te olvidan seguimientos.</Pain>
+                <Pain>Estás en obra y cuando contestas, ya eligieron a otro.</Pain>
+                <Pain>Envías presupuesto y se muere por falta de seguimiento.</Pain>
+                <Pain>Se te acumulan chats y se te olvidan respuestas.</Pain>
+                <Pain>Tu agenda se llena de visitas que no valen la pena.</Pain>
                 <Pain>Acabas trabajando más… y cerrando lo mismo.</Pain>
               </div>
               <div className="painClose">Nosotros lo arreglamos con sistema, no con fuerza de voluntad.</div>
@@ -156,7 +156,7 @@ export default function App() {
 
               <div className="ctaStrip">
                 <div>
-                  <div className="ctaStripT">Te digo si encaja en tu empresa</div>
+                  <div className="ctaStripT">¿Encaja en tu empresa?</div>
                   <div className="muted">Mándame tu zona y si haces instalación/averías.</div>
                 </div>
                 <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
