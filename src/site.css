@@ -169,3 +169,17 @@ h2{ font-size: 28px; margin: 0; letter-spacing: -.2px; }
   .btn{ width: 100%; }
   .navCtas .btn.ghost{ display:none; }
 }
+
+/* Compact variant to keep page short */
+.steps.compact .step{ padding: 10px; }
+
+/* Mobile-first: sticky CTA only on mobile */
+@media (min-width: 920px){
+  .sticky{ display:none; }
+}
+
+/* Reduce section spacing on mobile */
+@media (max-width: 920px){
+  .section{ padding: 22px 0; }
+  .hero{ padding: 18px 0 18px; }
+}
