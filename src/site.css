@@ -71,6 +71,11 @@ h1{ font-size: 44px; line-height: 1.05; margin: 10px 0 10px; letter-spacing: -.7
 
 .heroCtas{ display:flex; align-items:center; gap: 12px; flex-wrap:wrap; margin: 14px 0 10px; }
 
+.metrics{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0 6px; }
+.metric{ border: 1px solid rgba(15, 23, 42, .10); border-radius: 16px; padding: 10px 12px; background: rgba(255,255,255,.75); box-shadow: 0 10px 24px rgba(2,6,23,.04); }
+.metricV{ font-weight: 950; letter-spacing: -.2px; }
+.metricL{ color: var(--muted); font-size: 12px; margin-top: 2px; }
+
 .bullets3{ display:grid; gap: 10px; margin-top: 10px; }
 .bullet{ display:flex; gap: 10px; align-items:flex-start; color: var(--muted); font-size: 14px; line-height: 1.5; }
 .check{ width: 10px; height: 10px; border-radius: 999px; margin-top: 7px;
@@ -78,6 +83,25 @@ h1{ font-size: 44px; line-height: 1.05; margin: 10px 0 10px; letter-spacing: -.7
 }
 
 .divider{ height: 1px; background: rgba(15, 23, 42, .08); margin: 16px 0; }
+
+.pain{ margin-top: 14px; }
+.painTitle{ font-weight: 950; font-size: 24px; letter-spacing: -.3px; margin: 4px 0 10px; }
+.painList{ display:grid; gap: 8px; }
+.painItem{ border: 1px solid rgba(15, 23, 42, .10); border-radius: 14px; padding: 10px 12px; background: rgba(255,255,255,.75); color: var(--muted); }
+.painClose{ margin-top: 10px; font-weight: 900; }
+
+.trust{ display:grid; gap: 10px; margin-top: 12px; }
+.trustItem{ border: 1px solid rgba(15, 23, 42, .10); border-radius: 16px; padding: 12px; background: rgba(255,255,255,.75); }
+.trustT{ font-weight: 950; margin-bottom: 4px; }
+
+@media (max-width: 920px){
+  .metrics{ grid-template-columns: 1fr; }
+  .painTitle{ font-size: 22px; }
+}
+
+@media (max-width: 420px){
+  .painTitle{ font-size: 20px; }
+}
 
 .kicker{ color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 6px; }
 .howTitle{ font-weight: 950; letter-spacing: -.2px; }

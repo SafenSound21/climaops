@@ -20,12 +20,23 @@ function waLink() {
 function Bullet({ children }: { children: React.ReactNode }) {
   return (
     <div className="bullet">
-      <span className="check" aria-hidden>
-        
-      </span>
+      <span className="check" aria-hidden />
       <div>{children}</div>
     </div>
   );
+}
+
+function Metric({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="metric">
+      <div className="metricV">{value}</div>
+      <div className="metricL">{label}</div>
+    </div>
+  );
+}
+
+function Pain({ children }: { children: React.ReactNode }) {
+  return <div className="painItem">{children}</div>;
 }
 
 function Step({ n, title, desc }: { n: number; title: string; desc: string }) {
@@ -69,47 +80,84 @@ export default function App() {
             </h1>
 
             <p className="lead">
-              Te entran consultas mientras ests en obra. Si no respondes rpido (y no haces seguimiento), el cliente se va con otro.
-              ClimaOps pone orden para que cierres ms sin contratar a nadie.
+              Te entran consultas mientras estás en obra. Si no respondes rápido (y no haces seguimiento), el cliente se va con otro.
+              ClimaOps pone orden para que cierres más sin contratar a nadie.
             </p>
 
             <div className="heroCtas">
               <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
-                Quiero cerrar ms
+                Quiero cerrar más
               </a>
               <div className="fine">Respuesta en 2–3 min. Sin precios en web.</div>
             </div>
 
+            <div className="metrics">
+              <Metric value="< 15 min" label="respuesta (objetivo)" />
+              <Metric value="+ seguimiento" label="por estado" />
+              <Metric value="0 caos" label="agenda protegida" />
+            </div>
+
             <div className="bullets3">
               <Bullet>
-                <b>Respuesta en minutos</b> (aunque ests ocupado) para que el lead no se enfree.
+                <b>Respuesta en minutos</b> para que el lead no se enfríe.
               </Bullet>
               <Bullet>
-                <b>Presupuesto y seguimiento</b> automtico hasta cierre (sin perseguir a nadie).
+                <b>Presupuesto + seguimiento</b> hasta cierre (sin perseguir a nadie).
               </Bullet>
               <Bullet>
-                <b>Agenda protegida</b>: filtra curiosos y reduce visitas que no valen la pena.
+                <b>Filtro y confirmación</b> para reducir visitas que no valen la pena.
               </Bullet>
             </div>
+
+            <section className="pain">
+              <div className="kicker">El dolor real</div>
+              <div className="painTitle">
+                El problema no es la demanda.
+                <span className="grad"> Es la fuga.</span>
+              </div>
+              <div className="painList">
+                <Pain>Respondes tarde porque estás en obra.</Pain>
+                <Pain>Envías presupuesto y nadie vuelve a escribir.</Pain>
+                <Pain>Te llenas de “curiosos” que solo comparan precio.</Pain>
+                <Pain>Se te acumulan chats y se te olvidan seguimientos.</Pain>
+                <Pain>Acabas trabajando más… y cerrando lo mismo.</Pain>
+              </div>
+              <div className="painClose">Nosotros lo arreglamos con sistema, no con fuerza de voluntad.</div>
+            </section>
 
             <div className="divider" />
 
             <div className="how">
               <div className="howHead">
-                <div className="kicker">Cmo funciona</div>
-                <div className="howTitle">Sistema simple. Sin lo.</div>
+                <div className="kicker">Cómo funciona</div>
+                <div className="howTitle">Sistema simple. Sin lío.</div>
               </div>
 
               <div className="howGrid">
                 <Step n={1} title="Entrada ordenada" desc="Zona, urgencia, tipo y fotos. Respuesta inicial en minutos." />
-                <Step n={2} title="Agenda + confirmacin" desc="Huecos, recordatorios y reglas para evitar perder el tiempo." />
+                <Step n={2} title="Agenda + confirmación" desc="Huecos, recordatorios y reglas para evitar perder el tiempo." />
                 <Step n={3} title="Seguimiento" desc="No responde / visita / presupuesto / cierre. Todo por estado." />
+              </div>
+
+              <div className="trust">
+                <div className="trustItem">
+                  <div className="trustT">No bot pesado</div>
+                  <div className="muted">Mensajes cortos y útiles. Cuando toca, pasa a humano.</div>
+                </div>
+                <div className="trustItem">
+                  <div className="trustT">Control total</div>
+                  <div className="muted">Tú decides reglas, horarios y qué se envía.</div>
+                </div>
+                <div className="trustItem">
+                  <div className="trustT">Sin spam</div>
+                  <div className="muted">Seguimiento por estado, no mensajes a lo loco.</div>
+                </div>
               </div>
 
               <div className="ctaStrip">
                 <div>
                   <div className="ctaStripT">Te digo si encaja en tu empresa</div>
-                  <div className="muted">Mndame tu zona y si haces instalacin/averas.</div>
+                  <div className="muted">Mándame tu zona y si haces instalación/averías.</div>
                 </div>
                 <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
                   WhatsApp
@@ -117,7 +165,7 @@ export default function App() {
               </div>
 
               <div className="fine" style={{ marginTop: 10 }}>
-                * Nmero pendiente (O2). Cuando este activo, lo reemplazamos.
+                * Número pendiente (O2). Cuando esté activo, lo reemplazamos.
               </div>
             </div>
           </div>
@@ -126,8 +174,8 @@ export default function App() {
 
       <footer className="footer">
         <div className="container footerInner">
-          <div className="muted">a9 {new Date().getFullYear()} ClimaOps</div>
-          <div className="muted">Una sola CTA b7 Valencia</div>
+          <div className="muted">© {new Date().getFullYear()} ClimaOps</div>
+          <div className="muted">Una sola CTA · Valencia</div>
         </div>
       </footer>
 
