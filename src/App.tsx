@@ -153,40 +153,49 @@ function Step({ n, title, desc }: { n: number; title: string; desc: string }) {
 function FlowVisual() {
   return (
     <div className="visualCard" aria-hidden>
-      <div className="visualTitle">De consulta a cierre</div>
+      <div className="visualTitle">De consulta a cierre, sin fricción</div>
       <svg className="flowSvg" viewBox="0 0 560 260" fill="none">
         <defs>
           <linearGradient id="g" x1="40" y1="30" x2="520" y2="240" gradientUnits="userSpaceOnUse">
             <stop stopColor="var(--brand)" />
             <stop offset="1" stopColor="var(--brand2)" />
           </linearGradient>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="url(#g)" />
+          </marker>
         </defs>
 
-        {/* nodes */}
+        {/* nodes (1-2-3) */}
         <rect x="40" y="34" width="180" height="54" rx="16" className="flowNode" />
-        <text x="58" y="67" className="flowText">WhatsApp / web</text>
+        <text x="58" y="55" className="flowN">1</text>
+        <text x="78" y="67" className="flowText">WhatsApp / web</text>
 
         <rect x="40" y="106" width="180" height="54" rx="16" className="flowNode" />
-        <text x="58" y="139" className="flowText">Filtro (zona, fotos)</text>
+        <text x="58" y="127" className="flowN">2</text>
+        <text x="78" y="139" className="flowText">Filtro (zona, fotos)</text>
 
         <rect x="40" y="178" width="180" height="54" rx="16" className="flowNode" />
-        <text x="58" y="211" className="flowText">Agenda + confirmación</text>
+        <text x="58" y="199" className="flowN">3</text>
+        <text x="78" y="211" className="flowText">Agenda + confirmación</text>
 
-        <rect x="260" y="70" width="260" height="70" rx="18" className="flowNodeStrong" />
-        <text x="280" y="105" className="flowText">Presupuesto claro</text>
-        <text x="280" y="127" className="flowSub">+ seguimiento por estado</text>
+        {/* outcome */}
+        <rect x="250" y="64" width="300" height="82" rx="20" className="flowNodeStrong" />
+        <text x="272" y="98" className="flowText">Presupuesto claro</text>
+        <text x="272" y="122" className="flowSub">+ seguimiento por estado</text>
+        <circle cx="526" cy="91" r="12" fill="rgba(10,102,255,.10)" />
+        <path d="M520 92l4 4 9-11" stroke="url(#g)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
 
         {/* connectors */}
-        <path d="M220 61h40" className="flowLine" />
-        <path d="M220 133h40" className="flowLine" />
-        <path d="M220 205h40" className="flowLine" />
-        <path d="M260 105H520" className="flowLineStrong" />
+        <path d="M220 61h30" className="flowLine" />
+        <path d="M220 133h30" className="flowLine" />
+        <path d="M220 205h30" className="flowLine" />
+        <path d="M250 105H548" className="flowLineStrong" markerEnd="url(#arrow)" />
 
-        <circle cx="260" cy="61" r="4" fill="url(#g)" />
-        <circle cx="260" cy="133" r="4" fill="url(#g)" />
-        <circle cx="260" cy="205" r="4" fill="url(#g)" />
+        <circle cx="250" cy="61" r="4" fill="url(#g)" />
+        <circle cx="250" cy="133" r="4" fill="url(#g)" />
+        <circle cx="250" cy="205" r="4" fill="url(#g)" />
       </svg>
-      <div className="visualFoot">Visual de proceso (no stock). Reduce texto y aumenta claridad.</div>
+      <div className="visualFoot">Proceso visual (sin stock). Se entiende en 5–10s.</div>
     </div>
   );
 }
@@ -249,6 +258,89 @@ export default function App() {
                   <b>Más control</b>: reglas, horarios y qué se envía.
                 </Bullet>
               </div>
+
+              <section className="timeline">
+                <div className="kicker">Paso a paso</div>
+                <div className="timelineTitle">Así se cierra un trabajo (sin llamadas eternas)</div>
+
+                <div className="tl">
+                  <div className="tlStep">
+                    <div className="tlHead">
+                      <span className="tlIc" aria-hidden>
+                        <Icon name="sliders" />
+                      </span>
+                      <div>
+                        <div className="tlT">1) Consulta rápida</div>
+                        <div className="muted">WhatsApp/web con fotos y zona.</div>
+                      </div>
+                    </div>
+                    <div className="mock">
+                      <div className="mockTop">WhatsApp</div>
+                      <div className="mockMsg">“Necesito instalación esta semana.”</div>
+                      <div className="mockRow">
+                        <div className="mockP" />
+                        <div className="mockP" />
+                        <div className="mockP" />
+                      </div>
+                      <div className="mockMeta">Zona: Valencia · Fotos: 3</div>
+                    </div>
+                  </div>
+
+                  <div className="tlLine" aria-hidden />
+
+                  <div className="tlStep">
+                    <div className="tlHead">
+                      <span className="tlIc" aria-hidden>
+                        <Icon name="calendar" />
+                      </span>
+                      <div>
+                        <div className="tlT">2) Agenda confirmada</div>
+                        <div className="muted">Filtramos y confirmamos fecha en minutos.</div>
+                      </div>
+                    </div>
+                    <div className="mock">
+                      <div className="mockTop">Agenda</div>
+                      <div className="mockCal">
+                        <div className="mockDate">Jue 18</div>
+                        <div className="mockTime">10:30</div>
+                        <div className="mockBadge">Confirmado</div>
+                      </div>
+                      <div className="mockMeta">Recordatorio automático · Sin no-shows</div>
+                    </div>
+                  </div>
+
+                  <div className="tlLine" aria-hidden />
+
+                  <div className="tlStep tlFinal">
+                    <div className="tlHead">
+                      <span className="tlIc" aria-hidden>
+                        <Icon name="check" />
+                      </span>
+                      <div>
+                        <div className="tlT">3) Presupuesto claro</div>
+                        <div className="muted">+ seguimiento por estado hasta el “sí”.</div>
+                      </div>
+                    </div>
+                    <div className="mock final">
+                      <div className="mockTop">Presupuesto</div>
+                      <div className="mockPrice">790 €</div>
+                      <div className="mockRow2">
+                        <div className="mockK">Instalación</div>
+                        <div className="mockV">incluida</div>
+                      </div>
+                      <div className="mockRow2">
+                        <div className="mockK">Material</div>
+                        <div className="mockV">incluido</div>
+                      </div>
+                      <div className="mockBadge ok">Aprobado</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="fine" style={{ marginTop: 10 }}>
+                  Sin llamadas eternas. Sin bots. Sin spam.
+                </div>
+              </section>
 
               <section className="pain">
                 <div className="kicker">El dolor real</div>

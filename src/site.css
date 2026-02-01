@@ -137,12 +137,43 @@ h1{ font-size: 42px; line-height: 1.05; margin: 10px 0 10px; letter-spacing: -.7
 .visualTitle{ font-weight: 950; margin-bottom: 10px; }
 .flowSvg{ width: 100%; height: auto; display:block; }
 .flowNode{ stroke: rgba(15,23,42,.18); fill: rgba(255,255,255,.90); }
-.flowNodeStrong{ stroke: rgba(10,102,255,.25); fill: rgba(10,102,255,.06); }
-.flowText{ fill: rgba(15,23,42,.86); font-size: 16px; font-weight: 800; }
-.flowSub{ fill: rgba(15,23,42,.62); font-size: 12px; font-weight: 700; }
+.flowNodeStrong{ stroke: rgba(10,102,255,.35); fill: rgba(10,102,255,.10); filter: drop-shadow(0 10px 22px rgba(2,6,23,.08)); }
+.flowText{ fill: rgba(15,23,42,.86); font-size: 16px; font-weight: 900; }
+.flowN{ fill: rgba(15,23,42,.50); font-size: 12px; font-weight: 900; }
+.flowSub{ fill: rgba(15,23,42,.60); font-size: 12px; font-weight: 800; }
 .flowLine{ stroke: rgba(15,23,42,.18); stroke-width: 2; stroke-linecap: round; }
-.flowLineStrong{ stroke: url(#g); stroke-width: 3; stroke-linecap: round; }
+.flowLineStrong{ stroke: url(#g); stroke-width: 3.5; stroke-linecap: round; }
 .visualFoot{ margin-top: 10px; color: var(--muted); font-size: 12px; }
+
+/* Timeline mocks */
+.timeline{ margin-top: 14px; }
+.timelineTitle{ font-weight: 950; font-size: 22px; letter-spacing: -.25px; }
+.tl{ display:grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+.tlLine{ height: 1px; background: rgba(15,23,42,.08); }
+.tlStep{ border: 1px solid rgba(15, 23, 42, .10); border-radius: 18px; padding: 12px; background: rgba(255,255,255,.75); box-shadow: 0 10px 28px rgba(2,6,23,.05); }
+.tlHead{ display:flex; gap: 10px; align-items:flex-start; }
+.tlIc{ color: rgba(15,23,42,.72); margin-top: 2px; }
+.tlT{ font-weight: 950; }
+.tlFinal{ border-color: rgba(10,102,255,.22); box-shadow: 0 18px 44px rgba(2,6,23,.08); }
+
+.mock{ margin-top: 10px; border: 1px solid rgba(15,23,42,.10); border-radius: 16px; padding: 10px; background: rgba(255,255,255,.90); }
+.mock.final{ border-color: rgba(10,102,255,.22); background: rgba(10,102,255,.05); }
+.mockTop{ font-size: 12px; color: rgba(15,23,42,.55); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.mockMsg{ font-weight: 800; color: rgba(15,23,42,.86); }
+.mockRow{ display:flex; gap: 8px; margin-top: 10px; }
+.mockP{ width: 38px; height: 28px; border-radius: 10px; background: rgba(15,23,42,.08); }
+.mockMeta{ margin-top: 10px; font-size: 12px; color: rgba(15,23,42,.55); }
+
+.mockCal{ display:flex; align-items:center; gap: 10px; }
+.mockDate{ font-weight: 950; }
+.mockTime{ font-weight: 900; color: rgba(15,23,42,.75); }
+.mockBadge{ margin-left: auto; font-size: 12px; font-weight: 950; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(15,23,42,.12); background: rgba(255,255,255,.85); }
+.mockBadge.ok{ border-color: rgba(0,184,148,.30); background: rgba(0,184,148,.10); }
+
+.mockPrice{ font-size: 28px; font-weight: 950; letter-spacing: -.4px; }
+.mockRow2{ display:flex; justify-content:space-between; margin-top: 8px; }
+.mockK{ color: rgba(15,23,42,.65); font-weight: 800; }
+.mockV{ color: rgba(15,23,42,.86); font-weight: 900; }
 
 .footer{ border-top: 1px solid rgba(15, 23, 42, .08); padding: 16px 0 60px; }
 .footerInner{ display:flex; justify-content:space-between; gap: 12px; flex-wrap:wrap; }
