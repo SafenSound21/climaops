@@ -1,30 +1,32 @@
-# ClimaOps — Landing Quality Rubric (Publish Gate)
+# RUBRIC — ClimaOps Landing (30 puntos)
 
-**Objetivo:** decidir si una landing está lista para publicar sin discusión subjetiva.
+## Principio Supremo
+Si algo no mejora comprensión o conversión, se elimina aunque “cumpla la rúbrica”.
 
 ## Scoring
-Cada criterio se puntúa **0–3**:
-- 0 = falla / no está
-- 1 = está pero flojo
-- 2 = sólido
-- 3 = excelente
+0 = falla, 1 = flojo, 2 = sólido, 3 = excelente.
 
-**Publish threshold:** **24/30** y **0 critical fails**.
+**Publish Gate:** ≥24/30 y 0 critical fails.
+
+## Golden Tests (obligatorios)
+- 5–10s test: ¿entiende qué es y para quién?
+- Golden Question: ¿esta landing la usaría una empresa que cobra caro? (Sí/No + 2 frases)
 
 ## Criteria (10)
-1) **Clarity in 5–10s**: un desconocido entiende qué es y para quién.
-2) **Pain + consequence**: se siente el coste de no actuar.
-3) **Concrete promise**: promesa concreta (resultado), sin humo.
-4) **One goal / 1 CTA**: una acción, sin escapes.
-5) **Above-the-fold hierarchy**: headline + sub + CTA visibles en móvil.
-6) **Scannability**: frases cortas, bullets, sin bloques densos.
-7) **Friction removed**: microcopy anti-objeciones (2–3 min, sin precios, sin compromiso).
-8) **Credibility/trust** (sin testimonios): proceso claro + señales de seriedad + especificidad.
-9) **Mobile UX**: tap targets, spacing, legible, scroll corto.
-10) **Performance/cleanliness**: rápido, limpio, sin assets innecesarios.
+1) Clarity en 5–10s
+2) Dolor + consecuencia
+3) Promesa concreta (sin humo)
+4) One goal / 1 CTA
+5) Above-the-fold (headline+sub+CTA visibles en móvil)
+6) Scannability (no muros de texto)
+7) Friction removers (2–3 min, sin precios, sin compromiso)
+8) Credibility/Trust (sin testimonios → proceso visual + señales)
+9) Mobile UX (tap targets, spacing)
+10) Performance/cleanliness
 
-## Critical fails (si ocurre → NO publicar)
-- Más de **1 CTA real**.
-- Bloques de texto densos.
-- No se entiende en 10s.
-- No hay dolor/consecuencia.
+## Critical fails (bloquean)
+- No se entiende en 5–10s.
+- CTA ausente/confuso.
+- Solo texto / sin capa visual funcional.
+- Visuales decorativos / stock genérico.
+- Sin proof mínimo (aunque sea proceso + trust).

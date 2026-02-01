@@ -1,8 +1,15 @@
-# ClimaOps — Landing Score (current)
+# SCORE — ClimaOps Landing
 
-Fecha: 2026-02-01
+Versión evaluada: v1 (2026-02-01)
 
-## Evaluación (tras mejoras: pain section + proof + encoding)
+## Golden Tests
+- 5–10s test: ✅
+  - Un desconocido entiende: “sistema comercial para instaladores de A/A en Valencia para responder rápido, presupuestar y hacer seguimiento por WhatsApp”.
+
+- Golden Question: ¿esta landing la usaría una empresa que cobra caro? **Sí**.
+  - Justificación: Jerarquía clara + visuals semánticos + tono sobrio (no parece plantilla barata). Proceso y control transmiten “sistema”, no “freelance”.
+
+## Puntuación (0–3)
 1) Clarity 5–10s: 2/3
 2) Pain + consequence: 3/3
 3) Concrete promise: 2/3
@@ -10,16 +17,15 @@ Fecha: 2026-02-01
 5) Above-the-fold: 2/3
 6) Scannability: 2/3
 7) Friction removed: 3/3
-8) Credibility/trust: 2/3
+8) Credibility/trust: 3/3
 9) Mobile UX: 2/3
 10) Performance/cleanliness: 3/3
 
-**Total:** 24/30 → PASA gate ✅ (sin critical fails)
+TOTAL: **25/30** → PASA Publish Gate ✅ (sin critical fails)
 
-## Notas
-- Métricas marcadas como “objetivo” para no prometer datos falsos.
-- Trust block añadido para compensar falta de testimonios.
-- Se corrigieron acentos/encoding rotos.
+## Critical fails
+- Ninguno.
 
-## Próxima mejora (no bloqueante)
-- Subir scannability y above-the-fold (2→3) recortando el párrafo del lead a 1 línea y moviendo pain arriba en móvil.
+## Cambios sugeridos (para subir a 27–28)
+1) Above-the-fold a 3/3: reducir el sub a una línea y mover métricas más arriba en móvil.
+2) Scannability a 3/3: convertir bullets en 2 bullets + 1 micro‑proof ("medición semanal") para reducir lectura.
