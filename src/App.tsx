@@ -38,7 +38,7 @@ export default function App() {
               </div>
               <div>
                 <div className="brandName">ClimaOps</div>
-                <div className="brandTag">Para instaladores de A/A · Valencia</div>
+                <div className="brandTag">Instaladores A/A · Valencia</div>
               </div>
             </div>
             <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
@@ -46,82 +46,78 @@ export default function App() {
             </a>
           </nav>
 
-          <div className="hero">
-            <div className="heroLeft">
-              <h1>
-                Deja de perder instalaciones
-                <span className="grad"> por tardar en contestar.</span>
-              </h1>
-              <p className="lead">
-                Montamos un sistema simple para <b>responder</b>, <b>presupuestar</b>, <b>agendar</b> y <b>hacer seguimiento</b>.
-                Para que el cliente no se enfríe y tú no vivas en modo apagafuegos.
-              </p>
+          <div className="hero single">
+            <h1>
+              Si tardas en contestar,
+              <span className="grad"> pierdes la instalación.</span>
+            </h1>
+            <p className="lead">
+              Mientras estás en obra, el cliente pide 3 presupuestos. Nosotros montamos un sistema para <b>responder</b>, <b>filtrar</b> y <b>hacer seguimiento</b>
+              hasta que el trabajo se cierra.
+            </p>
 
-              <div className="heroCtas">
-                <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
-                  Quiero más cierres
-                </a>
+            <div className="heroCtas">
+              <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
+                Quiero más cierres
+              </a>
+            </div>
+
+            <div className="micro">
+              <div className="microItem">
+                <span className="dot" />
+                Respuesta en minutos (aunque estés ocupado)
               </div>
-
-              <div className="micro">
-                <div className="microItem">
-                  <span className="dot" />
-                  Respuesta en minutos (aunque estés en obra)
-                </div>
-                <div className="microItem">
-                  <span className="dot" />
-                  Presupuestos claros + recordatorios
-                </div>
-                <div className="microItem">
-                  <span className="dot" />
-                  Agenda protegida (menos visitas inútiles)
-                </div>
+              <div className="microItem">
+                <span className="dot" />
+                Presupuestos claros + recordatorios
               </div>
-
-              <div className="fine" style={{ marginTop: 10 }}>
-                Sin precios en web. Te decimos en 2–3 minutos si encaja.
+              <div className="microItem">
+                <span className="dot" />
+                Agenda protegida (menos visitas inútiles)
               </div>
             </div>
 
-            <div className="heroRight">
-              <div className="panel">
-                <div className="panelTop">
+            <div className="fine" style={{ marginTop: 10 }}>
+              Sin precios en web. Te decimos en 2–3 minutos si encaja.
+            </div>
+
+            <div className="panel" style={{ marginTop: 14 }}>
+              <div className="panelTop">
+                <div>
+                  <div className="panelTitle">Cómo funciona</div>
+                  <div className="muted">3 pasos. Sin lío.</div>
+                </div>
+              </div>
+
+              <div className="steps compact">
+                <div className="step">
+                  <div className="stepN">1</div>
                   <div>
-                    <div className="panelTitle">Implementación (rápida)</div>
-                    <div className="muted">3 pasos, sin lío.</div>
+                    <div className="stepTitle">Entrada ordenada</div>
+                    <div className="muted">Calificamos (zona/urgencia/fotos) y respondemos al instante.</div>
                   </div>
                 </div>
+                <div className="step">
+                  <div className="stepN">2</div>
+                  <div>
+                    <div className="stepTitle">Agenda + confirmación</div>
+                    <div className="muted">Huecos, recordatorios y reglas para filtrar curiosos.</div>
+                  </div>
+                </div>
+                <div className="step">
+                  <div className="stepN">3</div>
+                  <div>
+                    <div className="stepTitle">Seguimiento hasta cierre</div>
+                    <div className="muted">No responde / visita / presupuesto / cierre.</div>
+                  </div>
+                </div>
+              </div>
 
-                <div className="steps compact">
-                  <div className="step">
-                    <div className="stepN">1</div>
-                    <div>
-                      <div className="stepTitle">Entrada ordenada</div>
-                      <div className="muted">Calificamos (zona, urgencia, tipo, fotos) y respondemos al instante.</div>
-                    </div>
-                  </div>
-                  <div className="step">
-                    <div className="stepN">2</div>
-                    <div>
-                      <div className="stepTitle">Agenda + confirmaciones</div>
-                      <div className="muted">Huecos, recordatorios y reglas para filtrar curiosos.</div>
-                    </div>
-                  </div>
-                  <div className="step">
-                    <div className="stepN">3</div>
-                    <div>
-                      <div className="stepTitle">Seguimiento hasta cierre</div>
-                      <div className="muted">Secuencias por estado: no responde / visita / presupuesto / cierre.</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="panelCta">
-                  <a className="btn full" href={waLink()} target="_blank" rel="noreferrer">
-                    Hablar por WhatsApp
-                  </a>
-                  <div className="fine">* Número pendiente (O2). Cuando esté activo, lo reemplazamos.</div>
-                </div>
+              <div className="panelCta">
+                <a className="btn full" href={waLink()} target="_blank" rel="noreferrer">
+                  Hablar por WhatsApp
+                </a>
+                <div className="fine">* Número pendiente (O2). Cuando esté activo, lo reemplazamos.</div>
               </div>
             </div>
           </div>
@@ -138,17 +134,11 @@ export default function App() {
           <div className="faqGrid">
             <FAQ
               q="¿Esto es un bot?"
-              a={
-                <>
-                  No. Son flujos cortos para calificar y dar seguimiento. Cuando toca, pasa a humano.
-                </>
-              }
+              a={<>No. Son flujos cortos para calificar y dar seguimiento. Cuando toca, pasa a humano.</>}
             />
             <FAQ
               q="¿Cuánto tiempo me quita?"
-              a={
-                <>Una llamada inicial (30–45 min) y accesos básicos. El objetivo es quitarte trabajo desde la semana 1.</>
-              }
+              a={<>Una llamada inicial (30–45 min) y accesos básicos. El objetivo es quitarte trabajo desde la semana 1.</>}
             />
           </div>
 
