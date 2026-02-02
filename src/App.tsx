@@ -163,7 +163,7 @@ export default function App() {
             <div className="navInner">
               <div className="brand">
                 <div className="logo" aria-hidden>
-                  <span>CO</span>
+                  <img src="/logo.svg" alt="" width={36} height={36} />
                 </div>
                 <div>
                   <div className="brandName">ClimaOps</div>
