@@ -205,48 +205,19 @@ export default function App() {
                 <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
                   Hablar por WhatsApp
                 </a>
-                <div className="fine">En 2–3 min te digo si encaja y qué costaría en tu caso. Si no encaja, te lo digo igual.</div>
+                <div className="fine">Te digo en 2–3 min si encaja (y cuánto) en tu caso.</div>
               </div>
 
               <div className="bullets3">
                 <Bullet icon={<Icon name="sliders" />}>
-                  <b>Filtro en minutos</b>: zona + fotos + tipo de trabajo (atiendes menos curiosos).
+                  <b>Filtro</b> (zona + fotos) → atiendes menos curiosos.
                 </Bullet>
                 <Bullet icon={<Icon name="calendar" />}>
-                  <b>Agenda confirmada</b>: recordatorios y reglas para evitar paseos inútiles.
+                  <b>Agenda confirmada</b> → menos paseos inútiles.
                 </Bullet>
                 <Bullet icon={<Icon name="flow" />}>
-                  <b>Seguimiento simple</b>: no responde → visita → presupuesto → cierre.
+                  <b>Seguimiento por estado</b> → más cierres.
                 </Bullet>
-              </div>
-
-              <section className="pain">
-                <div className="kicker">El dolor</div>
-                <div className="painTitle">
-                  El problema no es la demanda.
-                  <span className="grad"> Es la fuga.</span>
-                </div>
-                <div className="painList">
-                  <Pain>Estás en obra y cuando contestas, ya eligieron a otro.</Pain>
-                  <Pain>Envías presupuesto y se muere por falta de seguimiento.</Pain>
-                  <Pain>Tu agenda se llena de visitas que no valen la pena.</Pain>
-                </div>
-              </section>
-
-              <section className="trust">
-                <TrustItem icon={<Icon name="check" />} title="Mensajes cortos y útiles" desc="Sin ‘chatbot raro’. Automatiza el primer filtro; el cierre lo haces tú." />
-                <TrustItem icon={<Icon name="sliders" />} title="Tú apruebas reglas y horarios" desc="Decides qué se envía, cuándo, y a quién. Control total." />
-                <TrustItem icon={<Icon name="shield" />} title="Seguimiento solo cuando toca" desc="Por estado, sin spam. Buscamos respuesta, no molestar." />
-              </section>
-
-              <div className="ctaStrip">
-                <div>
-                  <div className="ctaStripT">¿Encaja en tu empresa?</div>
-                  <div className="muted">Mándame tu zona y si haces instalación/averías.</div>
-                </div>
-                <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
-                  WhatsApp
-                </a>
               </div>
             </div>
 
@@ -254,6 +225,45 @@ export default function App() {
           </div>
         </div>
       </header>
+
+      <main className="main">
+        <div className="container">
+          <section className="section painSection">
+            <div className="kicker">El dolor</div>
+            <div className="sectionTitle">
+              El problema no es la demanda.
+              <span className="grad"> Es la fuga.</span>
+            </div>
+            <div className="painList">
+              <Pain>Estás en obra y cuando contestas, ya eligieron a otro.</Pain>
+              <Pain>Envías presupuesto y se muere por falta de seguimiento.</Pain>
+              <Pain>Tu agenda se llena de visitas que no valen la pena.</Pain>
+            </div>
+          </section>
+
+          <section className="section trustSection">
+            <div className="kicker">Control</div>
+            <div className="sectionTitle">Sin ‘chatbot raro’. Tú mandas.</div>
+            <div className="trust">
+              <TrustItem icon={<Icon name="check" />} title="Mensajes cortos y útiles" desc="Automatiza el primer filtro; el cierre lo haces tú." />
+              <TrustItem icon={<Icon name="sliders" />} title="Tú apruebas reglas y horarios" desc="Decides qué se envía, cuándo, y a quién." />
+              <TrustItem icon={<Icon name="shield" />} title="Seguimiento solo cuando toca" desc="Por estado, sin spam. Buscamos respuesta, no molestar." />
+            </div>
+          </section>
+
+          <section className="section">
+            <div className="ctaStrip">
+              <div>
+                <div className="ctaStripT">¿Encaja en tu empresa?</div>
+                <div className="muted">Mándame tu zona y si haces instalación/averías.</div>
+              </div>
+              <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
+                WhatsApp
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
 
       <footer className="footer">
         <div className="container footerInner">
