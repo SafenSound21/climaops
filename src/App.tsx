@@ -170,20 +170,22 @@ export default function App() {
     <div className="page">
       <header className="heroWrap">
         <div className="container">
-          <nav className="nav">
-            <div className="brand">
-              <div className="logo" aria-hidden>
-                <span>CO</span>
+          <div className="nav">
+            <div className="navInner">
+              <div className="brand">
+                <div className="logo" aria-hidden>
+                  <span>CO</span>
+                </div>
+                <div>
+                  <div className="brandName">ClimaOps</div>
+                  <div className="brandTag">Instaladores A/A · Valencia</div>
+                </div>
               </div>
-              <div>
-                <div className="brandName">ClimaOps</div>
-                <div className="brandTag">Instaladores A/A · Valencia</div>
-              </div>
+              <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
+                WhatsApp
+              </a>
             </div>
-            <a className="btn" href={waLink()} target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
-          </nav>
+          </div>
 
           <div className="heroGrid">
             <div className="heroSingle">
