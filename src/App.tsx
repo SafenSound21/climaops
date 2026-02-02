@@ -81,17 +81,6 @@ function Icon({ name }: { name: "clock" | "calendar" | "flow" | "check" | "alert
   }
 }
 
-function Bullet({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <div className="bullet">
-      <span className="bulletIc" aria-hidden>
-        {icon}
-      </span>
-      <div>{children}</div>
-    </div>
-  );
-}
-
 function Pain({ children }: { children: React.ReactNode }) {
   return (
     <div className="painItem">
@@ -187,8 +176,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="heroGrid">
-            <div className="heroSingle">
+          <div className="heroCenter">
+            <div className="heroText">
               <div className="badge">Para instaladores A/A · Valencia</div>
 
               <h1>
@@ -197,31 +186,21 @@ export default function App() {
               </h1>
 
               <p className="lead">
-                Primer filtro (zona/fotos), agenda confirmada y seguimiento por estado.
-                <span className="muted"> Sin contratar a nadie y sin estar pegado al móvil.</span>
+                Filtro (zona/fotos), agenda confirmada y seguimiento por estado.
+                <span className="muted"> Sin contratar a nadie.</span>
               </p>
 
               <div className="heroCtas">
                 <a className="btn lg" href={waLink()} target="_blank" rel="noreferrer">
                   Hablar por WhatsApp
                 </a>
-                <div className="fine">Te digo en 2–3 min si encaja (y cuánto) en tu caso.</div>
-              </div>
-
-              <div className="bullets3">
-                <Bullet icon={<Icon name="sliders" />}>
-                  <b>Filtro</b> (zona + fotos) → atiendes menos curiosos.
-                </Bullet>
-                <Bullet icon={<Icon name="calendar" />}>
-                  <b>Agenda confirmada</b> → menos paseos inútiles.
-                </Bullet>
-                <Bullet icon={<Icon name="flow" />}>
-                  <b>Seguimiento por estado</b> → más cierres.
-                </Bullet>
+                <div className="fine">En 2–3 min te digo si encaja.</div>
               </div>
             </div>
 
-            <FlowVisual />
+            <div className="heroVisual">
+              <FlowVisual />
+            </div>
           </div>
         </div>
       </header>

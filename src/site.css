@@ -34,7 +34,7 @@ a{ color: inherit; text-decoration:none; }
 .container{ max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
 .muted{ color: var(--muted); }
-.fine{ color: var(--muted); font-size: 12px; line-height: 1.4; }
+.fine{ color: rgba(15,23,42,.55); font-size: 12px; line-height: 1.5; }
 
 /* Header */
 .heroWrap{ padding: 92px 0 40px; border-bottom: 1px solid rgba(15, 23, 42, .06); }
@@ -68,15 +68,17 @@ a{ color: inherit; text-decoration:none; }
   background: rgba(255,255,255,.75);
   color: var(--muted);
   font-size: 13px;
+  margin-bottom: 6px;
 }
 
-.heroGrid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: 18px; align-items:start; }
-.heroSingle{ padding: 6px 0 10px; max-width: 720px; }
+.heroCenter{ display:grid; grid-template-columns: 1fr; gap: 28px; align-items:center; padding: 10px 0 6px; }
+.heroText{ text-align:center; display:flex; flex-direction:column; align-items:center; }
+.heroVisual{ display:flex; justify-content:center; }
 
-h1{ font-size: 48px; line-height: 1.04; margin: 10px 0 14px; letter-spacing: -1.2px; }
+h1{ font-size: 54px; line-height: 1.02; margin: 10px 0 14px; letter-spacing: -1.6px; text-align:center; max-width: 18ch; }
 .grad{ background: linear-gradient(135deg, var(--brand), var(--brand2)); -webkit-background-clip:text; background-clip:text; color: transparent; }
 
-.lead{ margin: 0; color: rgba(15,23,42,.86); font-size: 17px; line-height: 1.72; letter-spacing: -.1px; max-width: 54ch; }
+.lead{ margin: 0; color: rgba(15,23,42,.76); font-size: 17px; line-height: 1.72; letter-spacing: -.1px; max-width: 56ch; text-align:center; }
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
@@ -132,12 +134,14 @@ h1{ font-size: 48px; line-height: 1.04; margin: 10px 0 14px; letter-spacing: -1.
 /* Visual card */
 .visualCard{
   border: 1px solid rgba(15, 23, 42, .10);
-  border-radius: 22px;
-  padding: 16px;
-  background: var(--surface);
+  border-radius: 26px;
+  padding: 18px;
+  background: rgba(255,255,255,.78);
   box-shadow: var(--shadow);
-  position: sticky;
-  top: 98px;
+  position: relative;
+  top: auto;
+  max-width: 720px;
+  width: 100%;
 }
 .visualTitle{ font-weight: 950; margin-bottom: 4px; }
 .visualSub{ color: var(--muted); font-size: 13px; margin-bottom: 10px; }
@@ -183,9 +187,8 @@ h1{ font-size: 48px; line-height: 1.04; margin: 10px 0 14px; letter-spacing: -1.
 }
 
 @media (max-width: 920px){
-  .heroGrid{ grid-template-columns: 1fr; }
-  .visualCard{ position: relative; top: auto; }
-  h1{ font-size: 38px; }
+  .heroCenter{ grid-template-columns: 1fr; }
+  h1{ font-size: 42px; }
   .ctaStrip{ flex-direction: column; align-items: stretch; }
 }
 
